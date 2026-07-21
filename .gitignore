@@ -1,0 +1,31 @@
+# Original client imports
+client-imports/*
+
+# Keep the folder itself
+!client-imports/.gitkeep
+
+# Credentials and private files
+.env
+.env.*
+credentials/
+private/
+secrets/
+*.pem
+*.key
+
+# Large archives and videos
+*.zip
+*.rar
+*.7z
+*.mov
+*.mp4
+*.m4v
+*.avi
+
+# Temporary and system files
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
+~$*
+.vscode/settings.local.json
