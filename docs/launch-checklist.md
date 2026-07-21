@@ -1,5 +1,19 @@
 # Launch Checklist
 
+## Current explicit blockers
+
+| Blocker | Canonical record | Required resolution |
+| --- | --- | --- |
+| Competition and convention dates are marked do not publish | MI-005 | Exclude unless the client gives explicit publication approval |
+| Guardian/media releases for child images are unconfirmed | MI-012 | Confirm public website coverage for every selected image |
+| Studio Pro account/program deep links are missing | MI-015 | Supply and test exact links or retain accurately labeled general actions |
+| Public contact details and party inquiry email are not fully verified | MI-009, MI-016 | Client confirms exact public details |
+| Summer Camp details are incomplete | MI-010 | Client supplies names, ages, sessions, prices, policies and registration destination |
+| Schedule/date conflicts remain | MI-001–MI-004, MI-017 | Resolve before publishing affected values |
+| Four staff roles/bios are missing | MI-008 | Confirm or omit those profiles |
+
+All blocker details and resolutions belong in `docs/missing-information.md`. Do not mark launch ready while a blocker remains open and its affected content is present.
+
 ## Content approval
 
 - [ ] All page copy is fact-checked and approved.

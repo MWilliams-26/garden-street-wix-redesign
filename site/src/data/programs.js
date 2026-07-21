@@ -1,0 +1,2 @@
+export const programs=[{name:'Dance',text:'Build technique, musicality and confidence through a range of dance styles.',to:'/classes'},{name:'Musical Theatre',text:'Sing, act and dance as part of a cast.',to:'/musical-theatre'},{name:'Camps & Performances',text:'Creative experiences and opportunities to take the stage.',to:'/camps-performances'}];
+export const productions=[{name:'Trolls Kids',ages:'Ages 4–6',day:'Mondays, 4:30–5:30 p.m.',tuition:'$125/month'},{name:'Willy Wonka Jr.',ages:'Ages 7–Teen',day:'Mondays, 5:30–6:30 p.m.',tuition:'$125/month'}];

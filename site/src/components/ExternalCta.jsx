@@ -1,0 +1,1 @@
+export default function ExternalCta({href,children,className='button'}){if(!href)return null;return <a className={className} href={href} target="_blank" rel="noreferrer">{children}<span className="external" aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a>}

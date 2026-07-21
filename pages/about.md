@@ -19,9 +19,9 @@ Build trust with an accurate, welcoming studio story, verified values, and appro
 
 ## Hero
 
-- **Heading:** Pending verified copy
-- **Supporting text:** Pending
-- **Media:** Pending inventory
+- **Heading:** A welcoming performing-arts community in Hoboken since 2005.
+- **Supporting text:** Garden Street helps children train with purpose, perform with confidence and grow as artists and individuals.
+- **Media:** Owners portrait, approved studio-space image or a shortlisted community image after asset approval and media-release confirmation.
 
 ## Proposed sections
 
@@ -36,7 +36,11 @@ Build trust with an accurate, welcoming studio story, verified values, and appro
 
 | Name | Role | Approved bio | Credentials source | Photo path | Status |
 | --- | --- | --- | --- | --- | --- |
-| Pending | Pending | Pending | Pending | Pending | Unverified |
+| Cory Johnson | Studio Owner | Short owner introduction supplied | Archived `pages/about.md` | Archived owner headshot/owners portrait | Source available; client/public-use approval required |
+| Victoria Johnson | Studio Owner and Director | Short owner introduction supplied | Archived `pages/about.md` | Archived owner headshot/owners portrait | Source available; client/public-use approval required |
+| Sherissa Salas | Administrative Assistant | Bio supplied | Archived `pages/about.md` | Archived staff headshot | Source available; client/public-use approval required |
+| Emily Derrick | Musical Theatre Program Director and ballet instructor | Bio supplied | Archived `pages/about.md` | Archived staff headshot | Source available; client/public-use approval required |
+| Annamaria Diamant, Marissa Ferm, Maggie Cantwell and Bridget Bailey | Pending confirmation | Not supplied | Archived staff inventory | Archived staff headshots | Do not publish placeholder roles |
 
 ## Responsive recommendations
 

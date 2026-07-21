@@ -18,21 +18,27 @@ Help parents quickly understand Garden Street Performing Arts, identify the righ
 
 ## Hero
 
-- **Eyebrow:** Pending
-- **Heading:** Pending verified copy
-- **Supporting text:** Pending
-- **Primary CTA:** Pending verified destination
-- **Secondary CTA:** Pending
-- **Media:** Pending inventory
+- **Eyebrow:** Garden Street School of the Performing Arts
+- **Heading:** Train. Perform. Grow.
+- **Supporting text:** A welcoming performing-arts home where children build creativity, confidence and skills that last far beyond the stage.
+- **Primary CTA:** View Classes & Register — verified general Studio Pro landing page
+- **Secondary CTA:** Explore Programs by Age — homepage section anchor
+- **Media:** Candidate-only; see `docs/remaining-photo-inventory.md` and `wix/homepage-build-plan.md`. Client approval and media-release confirmation required.
 
 ## Proposed sections
 
-1. Program pathways
-2. Why families choose Garden Street
-3. Featured or timely offering
-4. Studio/community introduction
-5. Location or visit information
-6. Final call to action
+1. Header and navigation
+2. Hero
+3. Find a Program by Age
+4. Explore Garden Street
+5. Why Garden Street
+6. Current Programs and Promotions
+7. Performance and Community Gallery
+8. Owner introduction
+9. Final Studio Pro registration CTA
+10. Footer
+
+The build-ready section copy, layout, destinations, image candidates and checklists are authoritative in `wix/homepage-build-plan.md`.
 
 ## Copy and evidence
 
@@ -56,7 +62,7 @@ Lead with the key parent benefit and a large, immediate action; stack sections i
 
 | Asset | Purpose | Source | Working-copy path | Alt text | Status |
 | --- | --- | --- | --- | --- | --- |
-| Pending | Pending | Pending | Pending | Pending | Not selected |
+| `DSC09066.jpg` | Candidate hero | Read-only local photo library | None created | Young dancers jump in unison across the studio. | Shortlisted; approval/release blocked |
 
 ## Links and QA
 

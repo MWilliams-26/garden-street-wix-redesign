@@ -1,40 +1,49 @@
 # Sitemap
 
-## Proposed primary navigation
+## Status and authority
 
-| Order | Page | Purpose | Primary CTA | Status |
-| --- | --- | --- | --- | --- |
-| 1 | Home | Orient families and direct common tasks | Pending verification | Draft |
-| 2 | Classes | Explain class offerings and route to registration | Pending verification | Draft |
-| 3 | Camps & Events | Present camps and special events | Pending verification | Draft |
-| 4 | Competition Teams | Explain team opportunities and next steps | Pending verification | Draft |
-| 5 | Parties & Rentals | Explain party and rental options | Pending verification | Draft |
-| 6 | About | Build trust and introduce the studio | Pending verification | Draft |
-| 7 | Contact | Provide verified contact and location details | Pending verification | Draft |
+This is the authoritative page and navigation list for the redesign plan. It does not modify the live Wix site. Page labels remain working labels until approved in Wix.
 
-## Utility navigation
+## Pages
 
-- Studio Pro account/login link — exact purpose and URL pending verification.
-- Registration link — exact purpose and URL pending verification.
+| Order | Page | Suggested slug | Purpose | End-of-page action | Readiness |
+| ---: | --- | --- | --- | --- | --- |
+| 1 | Home | `/` | Orient families, help them find an age-appropriate program and establish trust | View Classes & Register | Plan ready; image permissions pending |
+| 2 | Classes | `/classes` | Explain dance, acro and tumbling options without duplicating live availability | View Current Availability | Source copy available; schedule corrections pending |
+| 3 | Musical Theatre | `/musical-theatre` | Present Trolls Kids and Willy Wonka Jr. as accessible webpage content | Program-specific label to general Studio Pro page until deep links are supplied | Time-sensitive details require final confirmation |
+| 4 | Camps & Performances | `/camps-performances` | Introduce camps, recitals and performance opportunities | View Current Availability | Camp details incomplete; competition dates excluded |
+| 5 | Parties & Rentals | `/parties-rentals` | Explain packages, themes and inquiry path | Plan a Party, then View Classes & Register | Inquiry email pending confirmation |
+| 6 | About | `/about` | Present mission, history, ownership, staff and studio environment | View Classes & Register | Four staff roles/bios pending |
+| 7 | Contact | `/contact` | Provide location, approved contact methods and quick actions | Manage Your Account or View Classes & Register | Contact details require verification |
+| 8 | Important Dates | `/important-dates` | Publish approved season dates, closures and day camps as searchable text | View Current Availability | Several dates remain blocked |
 
-## Footer navigation
+## Primary navigation
 
-To be defined after content and policy inventory.
+1. Classes
+2. Musical Theatre
+3. Camps & Performances
+4. Parties & Rentals
+5. About
+6. Contact
+7. **Register** — external button to the verified general Studio Pro registration landing page
 
-## Responsive navigation recommendations
+The logo returns to Home; Home does not need a separate desktop menu label. Competition Teams are represented only through approved copy within Camps & Performances until a complete public program overview is approved.
 
-### Desktop
+## Secondary and footer links
 
-Keep primary destinations visible, with one clearly prioritized Studio Pro call to action.
+- Important Dates
+- Shop
+- Mailing List
+- Parent Login — retain as a pending label until its exact account-management destination is verified
+- Instagram
+- Privacy/accessibility links if supplied or required before launch
 
-### Tablet
+## Responsive navigation
 
-Test label fit and collapse navigation before items wrap or become difficult to tap.
+- **Desktop/laptop:** Logo left, six text links, and one visually distinct Register button. Keep the header within Wix Editor gridlines and prevent wrapping.
+- **Tablet verification:** Classic Wix Editor does not provide an independent tablet breakpoint. Verify the desktop header in portrait and landscape tablet widths; use the mobile menu at narrower widths if the current Wix header supports that behavior rather than allowing labels to collide.
+- **Mobile:** Logo, clearly labeled menu control and easy access to Register. Keep all primary items in the same order, followed by secondary links. Use touch targets around 44 × 44 CSS pixels or larger.
 
-### Mobile
+## External-link behavior
 
-Use a concise menu, large touch targets, and direct access to the highest-priority parent task.
-
-## Open questions
-
-- Confirm final labels, hierarchy, and verified Studio Pro destinations.
+External destinations must be clearly labeled and tested logged out on desktop and mobile. Whether external links open in the same or a new tab is a pending sitewide decision; use one consistent pattern.

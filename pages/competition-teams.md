@@ -1,8 +1,12 @@
-# Competition Teams Page
+# Competition Teams Source Notes — No Standalone Page Approved
+
+## Status
+
+Do not build `/competition-teams` from this file. The authoritative sitemap places only future approved Competition Teams copy within `/camps-performances`. Internal competition and convention dates remain prohibited from publication.
 
 ## Page objective
 
-Explain the verified competition-team offering, expectations, and appropriate next step without making unsupported claims.
+Preserve the questions and evidence needed for a future parent-facing section without making unsupported claims.
 
 ## Audience questions
 
@@ -11,24 +15,12 @@ Explain the verified competition-team offering, expectations, and appropriate ne
 - What commitment is involved?
 - How does a family express interest or take the next step?
 
-## SEO and page settings
-
-- **Page title:** Pending
-- **Meta description:** Pending
-- **URL slug:** `/competition-teams`
-
-## Hero
-
-- **Heading:** Pending verified copy
-- **Supporting text:** Pending
-- **Primary CTA:** Pending verified destination
-
-## Proposed sections
+## Future section outline after client approval
 
 1. Program overview
 2. Experience and benefits supported by client materials
 3. Verified expectations or process
-4. Team media
+4. Approved team media
 5. Next steps
 
 ## Facts requiring verification
@@ -58,3 +50,5 @@ Lead with a plain-language overview and make the next step easy to find.
 - [ ] Credentials, achievements, and expectations are sourced.
 - [ ] CTA destination is verified.
 - [ ] Desktop, tablet, and mobile checked.
+- [ ] Client explicitly approves all public team copy and any competition imagery.
+- [ ] No internal competition/convention date is included.

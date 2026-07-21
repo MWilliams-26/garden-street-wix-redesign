@@ -2,11 +2,11 @@
 
 ## Purpose
 
-This repository is the shared project headquarters for planning and delivering the Garden Street Performing Arts website redesign. It keeps client-material inventories, approved website copy, selected assets, planning documents, references, Studio Pro links, Wix specifications, decisions, QA notes, and build progress synchronized through GitHub.
+This repository is the shared project headquarters for the Garden Street Performing Arts website redesign. The user-authorized custom Vite + React app is in `site/`; planning and source records remain at the root. Wix stays live until an approved migration. Do not deploy, change DNS, or alter Wix without explicit approval.
 
 ## What this repository is not
 
-- It is not the Wix website or a Wix codebase.
+- It does not directly connect to the Wix website.
 - It does not connect to, edit, or publish the live Wix site.
 - It is not the system for registration, payments, accounts, or detailed availability.
 - It is not a place for credentials, student records, payment data, private personal data, original archives, or large original videos.

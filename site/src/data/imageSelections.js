@@ -1,0 +1,40 @@
+const image = (src, sourcePath, page, section, alt, width, height, options = {}) => ({
+  src, sourcePath, page, section, crop: options.crop || 'cover',
+  objectPosition: options.objectPosition || '50% 50%', mobileObjectPosition: options.mobileObjectPosition || options.objectPosition || '50% 50%',
+  alt, backup: options.backup || null, width, height,
+});
+
+export const images = {
+  hero: image('/images/classes/hero-ballet-class.webp','client-imports/photos-20260721/Photos/Classes/Belle Ballet 06_26_26 Edited (1)/DSC09066.jpg','Home','Hero','Young ballet students learning together in the Garden Street studio',2400,1600,{objectPosition:'50% 42%',mobileObjectPosition:'62% 50%',backup:['DSC09264.jpg','DSC09321.jpg']}),
+  communityDance: image('/images/classes/community-dance-class.webp','client-imports/photos-20260721/Photos/Classes/Belle Ballet 06_26_26 Edited (1)/DSC09264.jpg','Home, Classes','Community','Students participating in dance class',2400,1600),
+  communityBallet: image('/images/classes/community-ballet-class.webp','client-imports/photos-20260721/Photos/Classes/Belle Ballet 06_26_26 Edited (1)/DSC09321.jpg','Home, Classes','Community','Young dancers gathered during ballet class',2400,1600),
+  classBallet: image('/images/classes/ballet-class.webp','client-imports/photos-20260721/Photos/Classes/Belle Ballet 06_26_26 Edited (1)/DSC09164.jpg','Classes','Gallery','Ballet students practicing at the barre',2400,1600),
+  classTeaching: image('/images/classes/teaching-portrait.webp','client-imports/photos-20260721/Photos/Classes/Belle Ballet 06_26_26 Edited (1)/DSC09393.jpg','Home, Classes','Instruction','Instructor supporting a young ballet student',2400,3601,{objectPosition:'50% 35%'}),
+  classLeap: image('/images/classes/solo-leap.webp','client-imports/photos-20260721/Photos/Classes/Belle Ballet 06_26_26 Edited (1)/DSC09337.jpg','Classes, 404','Gallery','Dancer performing a leap in the studio',2400,1600),
+  owners: image('/images/staff/cory-victoria-johnson-owners-portrait.webp','assets/staff/web-ready/cory-victoria-johnson-owners-portrait.webp','Home, About','Owners','Garden Street owners Cory and Victoria Johnson',2388,2390),
+  cory: image('/images/staff/cory-johnson-owner-headshot.webp','assets/staff/web-ready/cory-johnson-owner-headshot.webp','About','Staff','Cory Johnson',1254,1254),
+  victoria: image('/images/staff/victoria-johnson-owner-director-headshot.webp','assets/staff/web-ready/victoria-johnson-owner-director-headshot.webp','About','Staff','Victoria Johnson',1254,1254),
+  emily: image('/images/staff/emily-derrick-headshot.webp','assets/staff/web-ready/emily-derrick-headshot.webp','About','Staff','Emily Derrick',378,644,{objectPosition:'50% 25%'}),
+  sherissa: image('/images/staff/sherissa-salas-administrative-assistant-headshot.webp','assets/staff/web-ready/sherissa-salas-administrative-assistant-headshot.webp','About','Staff','Sherissa Salas',1254,1254),
+  trolls: image('/images/programs/trolls-kids-fall-2026.webp','assets/programs/musical-theatre/web-ready/trolls-kids-fall-2026.webp','Home, Musical Theatre','Program','Trolls Kids Fall 2026 program artwork',1103,1426),
+  wonka: image('/images/programs/willy-wonka-jr-fall-2026.webp','assets/programs/musical-theatre/web-ready/willy-wonka-jr-fall-2026.webp','Home, Musical Theatre','Program','Willy Wonka Jr. Fall 2026 program artwork',1103,1426),
+  partyArtwork: image('/images/parties/party-packages-2026-27.webp','assets/parties-rentals/web-ready/party-packages-2026-27.webp','Home, Parties','Packages','Garden Street birthday party package artwork',1024,1536),
+  exterior: image('/images/studio/garden-street-building-exterior.webp','assets/studio/web-ready/garden-street-building-exterior.webp','Contact','Visit','Exterior of the Garden Street building on Washington Street',1175,1339),
+  brandedWall: image('/images/studio/studio-a-branded-wall.webp','assets/studio/web-ready/studio-a-branded-wall.webp','Parties, Contact','Studio','Garden Street branded studio wall',1800,2400),
+  studioMain: image('/images/studio/studio-a-main-floor.webp','assets/studio/web-ready/studio-a-main-floor.webp','Home, Parties','Studio','Main dance floor in Studio A',1800,2400),
+  studioB: image('/images/studio/studio-b-wood-floor.webp','assets/studio/web-ready/studio-b-wood-floor.webp','Parties','Studio','Wood dance floor in Studio B',1086,1448),
+  campWide: image('/images/camp/summer-camp-dance-class-wide.webp','assets/summer-camp/web-ready/summer-camp-dance-class-wide.webp','Home, Camps','Camp','Children dancing together at summer camp',2400,1800),
+  campCreative: image('/images/camp/summer-camp-creative-movement-class.webp','assets/summer-camp/web-ready/summer-camp-creative-movement-class.webp','Camps','Gallery','Summer campers in creative movement class',1800,2400),
+  campObstacle: image('/images/camp/summer-camp-obstacle-course.webp','assets/summer-camp/web-ready/summer-camp-obstacle-course.webp','Camps','Gallery','Summer camper navigating an obstacle course',1800,2400),
+  campCircle: image('/images/camp/summer-camp-circle-time.webp','assets/summer-camp/web-ready/summer-camp-circle-time.webp','Camps','Gallery','Summer campers gathered for circle time',2400,1800),
+  campBarre: image('/images/camp/summer-camp-children-at-barre.webp','assets/summer-camp/web-ready/summer-camp-children-at-barre.webp','Camps','Gallery','Summer campers learning at the ballet barre',2400,1800),
+  backstage: image('/images/performances/musical-theatre-young-cast-backstage.webp','assets/performances/web-ready/musical-theatre-young-cast-backstage.webp','Home, Musical Theatre, Camps','Performance','Young musical theatre cast backstage',1200,1600),
+  youngBallet: image('/images/performances/recital-young-ballet-blue-costumes.webp','assets/performances/web-ready/recital-young-ballet-blue-costumes.webp','Home, Camps','Performance','Young ballet dancers performing in blue costumes',748,450),
+  advanced: image('/images/performances/recital-advanced-dancer-black-costume.webp','assets/performances/web-ready/recital-advanced-dancer-black-costume.webp','Camps','Performance','Advanced dancer performing in a black costume',749,480),
+  hipHop: image('/images/performances/recital-hip-hop-pink-ensemble.webp','assets/performances/web-ready/recital-hip-hop-pink-ensemble.webp','Home, Camps','Performance','Hip-hop ensemble performing in pink costumes',747,482),
+  stageDuet: image('/images/performances/recital-stage-duet.webp','assets/performances/web-ready/recital-stage-duet.webp','Home, Camps','Performance','Two dancers performing a stage duet',1800,2400),
+  balletTrio: image('/images/performances/recital-ballet-trio-pink.webp','assets/performances/web-ready/recital-ballet-trio-pink.webp','Home, Camps','Performance','Ballet trio performing in pink costumes',1800,2400),
+  jazzRed: image('/images/performances/recital-jazz-line-red-costumes.webp','assets/performances/web-ready/recital-jazz-line-red-costumes.webp','Home, Camps','Performance','Jazz dancers performing in red costumes',1800,2400),
+};
+
+export const imageSelections = { hero: images.hero, backups: [images.communityDance, images.communityBallet] };
