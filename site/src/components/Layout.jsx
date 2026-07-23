@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { navigation } from '../data/navigation';
 import { externalLinks } from '../data/externalLinks';
@@ -6,6 +6,20 @@ import { siteSettings } from '../data/siteSettings';
 import ExternalCta from './ExternalCta';
 
 const focusableSelector = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+function FooterSection({ title, children }) {
+  const [open, setOpen] = useState(false);
+  const contentId = useId();
+  return (
+    <div className={`footer-section ${open ? 'open' : ''}`}>
+      <button className="footer-section-toggle" type="button" aria-expanded={open} aria-controls={contentId} onClick={() => setOpen((current) => !current)}>
+        <span>{title}</span><span aria-hidden="true">{open ? '−' : '+'}</span>
+      </button>
+      <h2 className="footer-section-title">{title}</h2>
+      <div className="footer-section-content" id={contentId}>{children}</div>
+    </div>
+  );
+}
 
 export default function Layout({ children }) {
   const [open, setOpen] = useState(false);
@@ -105,21 +119,19 @@ export default function Layout({ children }) {
             <p>Performing arts in Hoboken since 2005.</p>
             <ExternalCta href={externalLinks.generalRegistration}>View Classes & Register</ExternalCta>
           </div>
-          <div>
-            <h2>Visit</h2>
+          <FooterSection title="Visit">
             <address>{siteSettings.address}</address>
             <a href={`tel:${siteSettings.phone.replaceAll('-', '')}`}>{siteSettings.phone}</a>
             <a href={`mailto:${siteSettings.email}`}>{siteSettings.email}</a>
             <ExternalCta href={externalLinks.directions} className="footer-link">Get directions</ExternalCta>
-          </div>
-          <div>
-            <h2>Explore</h2>
+          </FooterSection>
+          <FooterSection title="Explore">
             <Link to="/important-dates">Important Dates</Link>
             <ExternalCta href={externalLinks.parentLogin} className="footer-link">Parent Login</ExternalCta>
             <ExternalCta href={externalLinks.shop} className="footer-link">Shop</ExternalCta>
             <ExternalCta href={externalLinks.mailingList} className="footer-link">Mailing List</ExternalCta>
             <ExternalCta href={externalLinks.instagram} className="footer-link">Instagram</ExternalCta>
-          </div>
+          </FooterSection>
         </div>
         <div className="footer-bottom">
           <p>© {new Date().getFullYear()} Garden Street Performing Arts</p>
