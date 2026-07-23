@@ -117,7 +117,7 @@ export default function Layout({ children }) {
               />
             </Link>
             <p>Performing arts in Hoboken since 2005.</p>
-            <ExternalCta href={externalLinks.generalRegistration}>View Classes & Register</ExternalCta>
+            <ExternalCta className="button footer-register" href={externalLinks.generalRegistration}>View Classes & Register</ExternalCta>
           </div>
           <FooterSection title="Visit">
             <address>{siteSettings.address}</address>

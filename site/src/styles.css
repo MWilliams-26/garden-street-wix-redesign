@@ -408,6 +408,10 @@ img {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.explore-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .cards.two {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -765,6 +769,18 @@ img {
   gap: 10px;
 }
 
+.contact-actions,
+.contact-secondary {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.contact-secondary {
+  margin-top: 22px;
+}
+
 address {
   margin-bottom: 24px;
   font-style: normal;
@@ -1018,9 +1034,13 @@ address {
   }
 
   .image-hero {
-    min-height: 500px;
+    min-height: 430px;
     align-items: flex-end;
     padding: 48px 24px;
+  }
+
+  .home-hero {
+    min-height: 500px;
   }
 
   .image-hero::after {
@@ -1038,9 +1058,20 @@ address {
   .split,
   .cards,
   .cards.two,
-  .age-row,
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .age-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .age-row a:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .age-row a:nth-child(-n + 2) {
+    border-bottom: 1px solid rgb(0 0 0 / 14%);
   }
 
   .visual-cards,
@@ -1068,9 +1099,37 @@ address {
     height: 145px;
   }
 
-  .age-choices,
   .class-results {
     grid-template-columns: 1fr;
+  }
+
+  .age-choices {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .musical-productions .card img {
+    height: 260px;
+    object-fit: contain;
+    background: var(--light-gray);
+  }
+
+  .about-owner-photo {
+    display: none;
+  }
+
+  .about-team .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-details {
+    order: -1;
+  }
+
+  .contact-image {
+    width: 100%;
+    height: 280px;
+    object-position: 50% 70%;
+    border-radius: var(--radius);
   }
 
   .finder-controls {
@@ -1176,7 +1235,133 @@ address {
   }
 }
 
+@media (min-width: 560px) and (max-width: 768px) {
+  .package-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .package-grid .card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .package-grid .price {
+    font-size: 1.3rem;
+  }
+
+  .package-grid .price > span {
+    white-space: nowrap;
+  }
+}
+
 @media (max-width: 600px) {
+  .page-hero:not(.image-hero) {
+    min-height: 300px;
+  }
+
+  .finder-prompt,
+  .class-summary {
+    display: none;
+  }
+
+  .price {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
+  .price > span {
+    display: block;
+  }
+
+  .price > span > span {
+    display: none;
+  }
+
+  .home-ages,
+  .home-programs,
+  .home-why,
+  .upcoming-section,
+  .home-community,
+  .owners {
+    padding-block: 44px;
+  }
+
+  .age-row a {
+    min-height: 138px;
+    padding: 14px;
+  }
+
+  .age-row strong {
+    font-size: 0.95rem;
+  }
+
+  .age-row span {
+    font-size: 0.76rem;
+    line-height: 1.45;
+  }
+
+  .home-why .checks {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-bottom: 0;
+  }
+
+  .home-why .checks li {
+    padding: 12px;
+    background: var(--light-gray);
+    border: 0;
+    border-radius: var(--radius);
+    font-size: 0.78rem;
+    line-height: 1.45;
+  }
+
+  .home-why .checks li::before {
+    display: block;
+    margin: 0 0 4px;
+  }
+
+  .upcoming-list {
+    gap: 8px;
+  }
+
+  .upcoming-list article {
+    display: grid;
+    grid-template-columns: 66px 1fr;
+    align-items: center;
+    min-height: 70px;
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .upcoming-list time {
+    margin: 0;
+    font-size: 0.72rem;
+  }
+
+  .upcoming-list h3 {
+    font-size: 0.98rem;
+  }
+
+  .owners > img {
+    height: 250px;
+    object-position: 50% 30%;
+  }
+
+  .contact-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-actions .button {
+    width: 100%;
+  }
+
+  .contact-secondary a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
   .site-footer {
     padding: 48px 20px 24px;
   }
@@ -1254,6 +1439,10 @@ address {
     font-size: 0.7rem;
   }
 
+  main:has(.not-found-hero) + .site-footer .footer-register {
+    display: none;
+  }
+
   .classes-hero {
     align-items: flex-start;
     aspect-ratio: 3 / 2;
@@ -1299,6 +1488,64 @@ address {
     margin-bottom: 0;
     font-size: clamp(0.82rem, 2.8vw, 1rem);
     line-height: 1.45;
+  }
+}
+
+@media (max-width: 500px) {
+  .musical-productions .visual-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .musical-productions .card img {
+    height: 280px;
+  }
+
+  .mobile-scroll-gallery,
+  .party-gallery {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 78%;
+    gap: 10px;
+    padding: 0 20px 12px;
+    margin-inline: -20px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scrollbar-width: thin;
+  }
+
+  .mobile-scroll-gallery img,
+  .party-gallery img {
+    height: 220px;
+    scroll-snap-align: start;
+  }
+
+  .about-team .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .about-team .card {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    padding: 14px;
+    column-gap: 14px;
+  }
+
+  .about-team .card img {
+    grid-row: 1 / 4;
+    width: 96px;
+    height: 124px;
+    margin: 0;
+    border-radius: 4px;
+  }
+
+  .about-team .card h3,
+  .about-team .card p {
+    margin-bottom: 7px;
+  }
+
+  .about-team .card p {
+    font-size: 0.82rem;
+    line-height: 1.5;
   }
 }
 
