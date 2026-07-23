@@ -1000,11 +1000,15 @@ address {
   }
 
   nav {
-    position: fixed;
-    inset: var(--header-height) 0 0;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
     display: none;
     flex-direction: column;
     align-items: stretch;
+    height: calc(100vh - var(--header-height));
+    height: calc(100dvh - var(--header-height));
     padding: 28px max(5vw, calc((100vw - 700px) / 2)) 50px;
     overflow-y: auto;
     color: var(--black);
