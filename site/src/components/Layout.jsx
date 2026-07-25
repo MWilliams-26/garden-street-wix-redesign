@@ -77,7 +77,7 @@ export default function Layout({ children }) {
         <div className="header-inner">
           <Link className="brand-logo" to="/" aria-label="Garden Street School of the Performing Arts home">
             <img
-              src="/images/brand/garden-street-logo-black-dark-green-transparent.webp"
+              src={`${import.meta.env.BASE_URL}images/brand/garden-street-logo-black-dark-green-transparent.webp`}
               width="2400"
               height="1320"
               alt="Garden Street School of the Performing Arts"
@@ -109,7 +109,7 @@ export default function Layout({ children }) {
           <div>
             <Link className="brand-logo footer-logo" to="/" aria-label="Garden Street home">
               <img
-                src="/images/brand/garden-street-logo-white-bright-green-transparent.webp"
+                src={`${import.meta.env.BASE_URL}images/brand/garden-street-logo-white-bright-green-transparent.webp`}
                 width="2400"
                 height="1320"
                 alt="Garden Street School of the Performing Arts"

@@ -2,7 +2,7 @@ export default function ResponsiveImage({ image, priority = false, className = '
   return (
     <img
       className={className}
-      src={image.src}
+      src={`${import.meta.env.BASE_URL}${image.src.replace(/^\//, '')}`}
       width={image.width}
       height={image.height}
       alt={image.alt}
