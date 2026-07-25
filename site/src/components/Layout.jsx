@@ -126,6 +126,7 @@ export default function Layout({ children }) {
             <ExternalCta href={externalLinks.directions} className="footer-link">Get directions</ExternalCta>
           </FooterSection>
           <FooterSection title="Explore">
+            <Link to="/summer-camp">Summer Camp</Link>
             <Link to="/important-dates">Important Dates</Link>
             <ExternalCta href={externalLinks.parentLogin} className="footer-link">Parent Login</ExternalCta>
             <ExternalCta href={externalLinks.shop} className="footer-link">Shop</ExternalCta>

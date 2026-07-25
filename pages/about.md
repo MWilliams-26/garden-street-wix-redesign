@@ -40,7 +40,7 @@ Build trust with an accurate, welcoming studio story, verified values, and appro
 | Victoria Johnson | Studio Owner and Director | Short owner introduction supplied | Archived `pages/about.md` | Archived owner headshot/owners portrait | Source available; client/public-use approval required |
 | Sherissa Salas | Administrative Assistant | Bio supplied | Archived `pages/about.md` | Archived staff headshot | Source available; client/public-use approval required |
 | Emily Derrick | Musical Theatre Program Director and ballet instructor | Bio supplied | Archived `pages/about.md` | Archived staff headshot | Source available; client/public-use approval required |
-| Annamaria Diamant, Marissa Ferm, Maggie Cantwell and Bridget Bailey | Pending confirmation | Not supplied | Archived staff inventory | Archived staff headshots | Do not publish placeholder roles |
+| Annamaria Diamant, Marissa Ferm, Maggie Cantwell and Bridget Bailey | Pending confirmation | Not supplied | Archived staff inventory and `Staff-20260724T150219Z-1-001.zip` | Website-ready headshots prepared in `assets/staff/web-ready/` and placed on About | Published with verified names and “Role and bio coming soon”; replace that status after owner-approved details are supplied |
 
 ## Responsive recommendations
 

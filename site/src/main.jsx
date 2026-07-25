@@ -1,6 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import '@fontsource/poppins/latin-400.css';
 import '@fontsource/poppins/latin-600.css';
 import '@fontsource/poppins/latin-700.css';
@@ -16,7 +16,8 @@ createRoot(document.getElementById('root')).render(
           <Route path="/" element={<Home />} />
           <Route path="/classes" element={<Classes />} />
           <Route path="/musical-theatre" element={<MusicalTheatre />} />
-          <Route path="/camps-performances" element={<Camps />} />
+          <Route path="/summer-camp" element={<Camps />} />
+          <Route path="/camps-performances" element={<Navigate to="/summer-camp" replace />} />
           <Route path="/parties-rentals" element={<Parties />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
