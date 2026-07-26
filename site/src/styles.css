@@ -1289,23 +1289,20 @@ img {
 }
 
 .contact-page-hero {
-  min-height: min(470px, 58vh);
+  min-height: 330px;
+  background: var(--primary-green);
 }
 
 .contact-page-hero .hero-copy {
-  max-width: 700px;
+  max-width: 760px;
 }
 
-.contact-heading {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
-  align-items: end;
-  margin-bottom: 38px;
-  gap: clamp(30px, 7vw, 90px);
+.contact-page-hero h1 {
+  margin-bottom: 16px;
+  font-size: clamp(2.75rem, 5vw, 4.6rem);
 }
 
-.contact-heading h2,
-.contact-heading > p {
+.contact-page-hero .lead {
   margin-bottom: 0;
 }
 
@@ -1320,7 +1317,7 @@ img {
   display: flex;
   flex-direction: column;
   min-width: 0;
-  min-height: 390px;
+  min-height: 330px;
   padding: clamp(25px, 3vw, 36px);
   overflow: hidden;
   background: var(--white);
@@ -1929,17 +1926,6 @@ address {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .contact-heading {
-    grid-template-columns: 1fr;
-    align-items: start;
-    margin-bottom: 28px;
-    gap: 12px;
-  }
-
-  .contact-heading > p {
-    max-width: 620px;
-  }
-
   .contact-choice-grid {
     grid-template-columns: 1fr;
   }
@@ -2486,7 +2472,7 @@ address {
   }
 
   .contact-page-hero {
-    min-height: 410px;
+    min-height: 280px;
   }
 
   .contact-choice {
