@@ -809,8 +809,7 @@ img {
   border: 0;
 }
 
-.choice-group legend,
-.day-filter {
+.choice-group legend {
   margin-bottom: 9px;
   color: var(--dark-green);
   font-size: 0.8rem;
@@ -818,7 +817,8 @@ img {
 }
 
 .age-choices,
-.interest-choices {
+.interest-choices,
+.day-choices {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -852,26 +852,66 @@ img {
 }
 
 .finder-controls {
+  display: grid;
+  gap: 2px;
+}
+
+.day-choices {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
+}
+
+.day-choices .choice {
   display: flex;
-  align-items: end;
+  align-items: center;
   justify-content: space-between;
-  gap: 30px;
-}
-
-.day-filter {
-  flex: 0 0 190px;
-}
-
-.day-filter select {
-  display: block;
-  width: 100%;
-  min-height: 48px;
-  margin-top: 9px;
-  padding: 10px 36px 10px 12px;
-  color: var(--black);
-  background: var(--white);
-  border: 1px solid var(--dark-gray);
   border-radius: 8px;
+  gap: 10px;
+}
+
+.day-choices small {
+  display: grid;
+  place-items: center;
+  min-width: 25px;
+  height: 25px;
+  padding-inline: 6px;
+  color: var(--dark-green);
+  background: rgb(37 105 20 / 10%);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.day-choices .active small {
+  background: rgb(255 255 255 / 58%);
+}
+
+.day-short {
+  display: none;
+}
+
+.finder-reset {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 18px;
+  margin-top: 24px;
+  border-top: 1px solid rgb(0 0 0 / 14%);
+}
+
+.finder-reset button {
+  min-height: 46px;
+  padding: 10px 22px;
+  color: var(--dark-green);
+  background: var(--white);
+  border: 2px solid var(--dark-green);
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.finder-reset button:hover {
+  color: var(--black);
+  background: var(--primary-green);
 }
 
 .finder-prompt,
@@ -900,7 +940,6 @@ img {
   margin: 0;
 }
 
-.reset-link,
 .class-register {
   color: var(--dark-green);
   background: none;
@@ -1521,13 +1560,7 @@ address {
   }
 
   .finder-controls {
-    align-items: stretch;
-    flex-direction: column;
     gap: 20px;
-  }
-
-  .day-filter {
-    flex-basis: auto;
   }
 
   .upcoming-list {
@@ -1646,6 +1679,119 @@ address {
     min-height: 300px;
   }
 
+  .class-finder {
+    padding-block: 40px;
+  }
+
+  .finder-intro {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+  }
+
+  .choice-group {
+    margin-top: 22px;
+  }
+
+  .age-choices {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .age-choices .choice {
+    min-height: 54px;
+    padding-inline: 10px;
+  }
+
+  .finder-controls {
+    gap: 0;
+  }
+
+  .interest-choices,
+  .day-choices {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .interest-choices .choice,
+  .day-choices .choice {
+    min-height: 44px;
+    padding: 9px 10px;
+  }
+
+  .day-choices {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .day-full {
+    display: none;
+  }
+
+  .day-short {
+    display: inline;
+  }
+
+  .finder-reset {
+    margin-top: 20px;
+  }
+
+  .finder-reset button {
+    width: 100%;
+  }
+
+  .results-heading {
+    margin-top: 30px;
+  }
+
+  .day-group {
+    margin-top: 24px;
+  }
+
+  .day-group > h3 {
+    margin-bottom: 9px;
+    font-size: 1.15rem;
+  }
+
+  .class-results {
+    gap: 10px;
+  }
+
+  .class-result {
+    padding: 16px;
+  }
+
+  .class-result-main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px;
+  }
+
+  .class-result h4 {
+    font-size: 1.05rem;
+  }
+
+  .class-meta {
+    margin-bottom: 0;
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  .class-register {
+    align-self: start;
+    min-height: 44px;
+    padding-block: 11px;
+    font-size: 0.76rem;
+    white-space: nowrap;
+  }
+
+  .class-result details {
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+
+  .class-details {
+    font-size: 0.84rem;
+  }
+
   .finder-prompt,
   .class-summary {
     display: none;
@@ -1729,19 +1875,8 @@ address {
   }
 
   .theatre-poster-links {
-    grid-template-columns: none;
-    grid-auto-flow: column;
-    grid-auto-columns: 74%;
-    justify-content: start;
-    padding: 0 20px 12px;
-    margin-inline: -20px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: thin;
-  }
-
-  .theatre-poster-link {
-    scroll-snap-align: start;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
   }
 
   .production-card {
@@ -1998,21 +2133,17 @@ address {
 @media (max-width: 500px) {
   .mobile-scroll-gallery,
   .party-gallery {
-    grid-template-columns: none;
-    grid-auto-flow: column;
-    grid-auto-columns: 78%;
-    gap: 10px;
-    padding: 0 20px 12px;
-    margin-inline: -20px;
-    overflow-x: auto;
-    scroll-snap-type: x proximity;
-    scrollbar-width: thin;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
   }
 
   .mobile-scroll-gallery img,
   .party-gallery img {
-    height: 220px;
-    scroll-snap-align: start;
+    height: 150px;
+  }
+
+  .party-gallery img:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
   }
 
   .about-team .cards {
@@ -2096,22 +2227,9 @@ address {
     margin: 0;
   }
 
-  .age-choices {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .interest-choices .choice {
-    flex: 1 1 calc(50% - 10px);
-  }
-
   .class-result-main,
   .results-heading {
     align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .class-register {
-    min-height: 44px;
   }
 
   .card {
@@ -2135,6 +2253,16 @@ address {
   .footer-bottom {
     flex-direction: column;
     gap: 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .class-result-main {
+    grid-template-columns: 1fr;
+  }
+
+  .class-register {
+    width: fit-content;
   }
 }
 

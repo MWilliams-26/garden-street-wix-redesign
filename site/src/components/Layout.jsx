@@ -25,12 +25,12 @@ export default function Layout({ children }) {
   const [open, setOpen] = useState(false);
   const menuButton = useRef(null);
   const menu = useRef(null);
-  const location = useLocation();
+  const { pathname } = useLocation();
 
   useEffect(() => {
     setOpen(false);
     window.scrollTo({ top: 0, behavior: 'auto' });
-  }, [location]);
+  }, [pathname]);
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : '';
