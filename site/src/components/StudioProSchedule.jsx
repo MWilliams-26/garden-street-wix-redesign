@@ -3,7 +3,7 @@ import { externalLinks } from '../data/externalLinks';
 
 export default function StudioProSchedule() {
   return (
-    <section className="schedule-callout">
+    <section className="schedule-callout" id="registration">
       <p className="eyebrow">Current availability</p>
       <h2>Find your place at Garden Street</h2>
       <p>Studio Pro has the latest class availability and registration details.</p>
