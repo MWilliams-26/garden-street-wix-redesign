@@ -6,7 +6,7 @@ import '@fontsource/poppins/latin-600.css';
 import '@fontsource/poppins/latin-700.css';
 import './styles.css';
 import Layout from './components/Layout';
-import { About, Camps, Classes, Contact, Dates, Home, MusicalTheatre, NotFound, Parties } from './pages/Pages';
+import { About, Camps, Classes, Contact, DanceTeams, Dates, Home, MusicalTheatre, NotFound, Parties, Pricing } from './pages/Pages';
 
 const Router = import.meta.env.BASE_URL === '/' ? BrowserRouter : HashRouter;
 
@@ -17,6 +17,8 @@ createRoot(document.getElementById('root')).render(
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/classes" element={<Classes />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/dance-teams" element={<DanceTeams />} />
           <Route path="/musical-theatre" element={<MusicalTheatre />} />
           <Route path="/summer-camp" element={<Camps />} />
           <Route path="/camps-performances" element={<Navigate to="/summer-camp" replace />} />

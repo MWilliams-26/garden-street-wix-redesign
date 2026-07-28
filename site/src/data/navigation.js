@@ -1,1 +1,1 @@
-export const navigation=[['Classes','/classes'],['Musical Theatre','/musical-theatre'],['Parties & Rentals','/parties-rentals'],['About','/about'],['Contact','/contact']];
+export const navigation=[['Classes','/classes'],['Pricing','/pricing'],['Dance Teams','/dance-teams'],['Musical Theatre','/musical-theatre'],['Parties & Rentals','/parties-rentals'],['About','/about'],['Contact','/contact']];

@@ -122,10 +122,12 @@ export default function Layout({ children }) {
           <FooterSection title="Visit">
             <address>{siteSettings.address}</address>
             <a href={`tel:${siteSettings.phone.replaceAll('-', '')}`}>{siteSettings.phone}</a>
-            <a href={`mailto:${siteSettings.email}`}>{siteSettings.email}</a>
+            <Link to="/contact">Send a message</Link>
             <ExternalCta href={externalLinks.directions} className="footer-link">Get directions</ExternalCta>
           </FooterSection>
           <FooterSection title="Explore">
+            <Link to="/pricing">Pricing</Link>
+            <Link to="/dance-teams">Dance Teams</Link>
             <Link to="/summer-camp">Summer Camp</Link>
             <Link to="/important-dates">Important Dates</Link>
             <ExternalCta href={externalLinks.parentLogin} className="footer-link">Parent Login</ExternalCta>
