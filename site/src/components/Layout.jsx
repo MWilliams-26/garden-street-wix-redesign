@@ -25,12 +25,21 @@ export default function Layout({ children }) {
   const [open, setOpen] = useState(false);
   const menuButton = useRef(null);
   const menu = useRef(null);
-  const { pathname } = useLocation();
+  const previousPathname = useRef(null);
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
     setOpen(false);
-    window.scrollTo({ top: 0, behavior: 'auto' });
-  }, [pathname]);
+    const pathChanged = previousPathname.current !== pathname;
+    previousPathname.current = pathname;
+    const frame = window.requestAnimationFrame(() => {
+      const target = hash && document.getElementById(decodeURIComponent(hash.slice(1)));
+      if (target) target.scrollIntoView({ behavior: 'auto', block: 'start' });
+      else if (pathChanged) window.scrollTo({ top: 0, behavior: 'auto' });
+    });
+
+    return () => window.cancelAnimationFrame(frame);
+  }, [pathname, hash]);
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : '';
@@ -122,7 +131,7 @@ export default function Layout({ children }) {
           <FooterSection title="Visit">
             <address>{siteSettings.address}</address>
             <a href={`tel:${siteSettings.phone.replaceAll('-', '')}`}>{siteSettings.phone}</a>
-            <Link to="/contact">Send a message</Link>
+            <Link to="/contact#contact-form">Send a message</Link>
             <ExternalCta href={externalLinks.directions} className="footer-link">Get directions</ExternalCta>
           </FooterSection>
           <FooterSection title="Explore">

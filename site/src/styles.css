@@ -151,6 +151,10 @@ main section {
   scroll-margin-top: var(--header-height);
 }
 
+main [id] {
+  scroll-margin-top: calc(var(--header-height) + 16px);
+}
+
 h1,
 h2,
 h3,
@@ -359,10 +363,42 @@ img {
 
 .seasonal-promo {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.9fr) minmax(220px, 0.55fr);
+  grid-template-columns: minmax(240px, 0.55fr) minmax(0, 1.45fr);
   align-items: center;
-  gap: clamp(28px, 5vw, 70px);
+  gap: clamp(28px, 4vw, 54px);
   background: var(--primary-green);
+}
+
+.seasonal-promo-image {
+  position: relative;
+}
+
+.seasonal-promo-image img {
+  width: 100%;
+  height: clamp(250px, 24vw, 340px);
+  border-radius: var(--radius);
+  object-position: 50% 38%;
+}
+
+.seasonal-promo-image span {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  padding: 8px 13px;
+  color: var(--white);
+  background: var(--dark-green);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.seasonal-promo-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(250px, 0.9fr) minmax(190px, 0.55fr);
+  align-items: center;
+  gap: clamp(24px, 3.5vw, 48px);
 }
 
 .seasonal-promo h2,
@@ -391,6 +427,11 @@ img {
 .seasonal-promo-action span {
   display: block;
   font-size: 0.76rem;
+}
+
+.seasonal-promo-action .external {
+  display: inline;
+  font-size: 1.05em;
 }
 
 .seasonal-promo-action > p:first-child strong {
@@ -972,41 +1013,6 @@ img {
   background: var(--white);
   border: 1px solid rgb(0 0 0 / 18%);
   border-radius: var(--radius);
-}
-
-.class-page-nav {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  padding-inline: max(32px, calc((100vw - var(--page-width)) / 2));
-  background: var(--white);
-  border-bottom: 1px solid rgb(0 0 0 / 12%);
-}
-
-.class-page-nav a {
-  display: flex;
-  align-items: center;
-  min-height: 70px;
-  padding: 14px 20px;
-  gap: 11px;
-  color: var(--dark-green);
-  border-right: 1px solid rgb(0 0 0 / 12%);
-  font-size: 0.86rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.class-page-nav a:first-child {
-  border-left: 1px solid rgb(0 0 0 / 12%);
-}
-
-.class-page-nav a:hover {
-  background: rgb(149 225 89 / 14%);
-}
-
-.class-page-nav span {
-  color: var(--dark-gray);
-  font-size: 0.65rem;
-  letter-spacing: 0.08em;
 }
 
 .class-finder {
@@ -2360,53 +2366,30 @@ address {
 }
 
 .about-hero {
-  display: block;
-  min-height: 0;
-  padding: 0;
-  color: var(--white);
-  background: var(--dark-green);
-}
-
-.about-hero-photo,
-.about-hero-photo img {
-  width: 100%;
-  height: clamp(360px, 30vw, 440px);
-  min-height: 0;
-}
-
-.about-hero-photo {
-  overflow: hidden;
-}
-
-.about-hero-photo img {
-  object-fit: cover;
-  object-position: 50% 25%;
+  color: var(--black);
+  background: linear-gradient(180deg, var(--light-gray) 0%, var(--light-gray) 62%, #e3f1da 100%);
 }
 
 .about-hero .hero-copy {
-  width: min(calc(100% - 64px), var(--page-width));
-  padding: 36px 0 44px;
-  margin-inline: auto;
+  width: auto;
 }
 
 .about-hero h1 {
-  max-width: 680px;
+  max-width: 620px;
   margin-bottom: 16px;
-  color: var(--white);
-  font-size: clamp(2.7rem, 3.7vw, 3.45rem);
+  color: var(--dark-green);
+  font-size: clamp(2rem, 3.5vw, 3.25rem);
+  line-height: 1.12;
 }
 
 .about-hero .lead {
-  max-width: 720px;
+  max-width: 560px;
   margin-bottom: 0;
-}
-
-.about-hero .eyebrow {
-  color: var(--primary-green);
 }
 
 .about-foundation {
   padding-block: clamp(44px, 5vw, 64px);
+  background: linear-gradient(180deg, #e3f1da 0%, var(--white) clamp(110px, 14vw, 180px));
 }
 
 .owner-profiles,
@@ -2491,40 +2474,6 @@ address {
 }
 
 @media (min-width: 769px) {
-
-  .about-hero {
-    padding: 36px 32px;
-    background: var(--light-gray);
-  }
-
-  .about-hero-photo,
-  .about-hero-photo img {
-    width: min(100%, 720px);
-    height: 430px;
-  }
-
-  .about-hero-photo {
-    margin-inline: auto;
-    border-radius: var(--radius) var(--radius) 0 0;
-  }
-
-  .about-hero-photo img {
-    object-position: 50% 24%;
-  }
-
-  .about-hero .hero-copy {
-    width: min(100%, 720px);
-    padding: 30px 36px 34px;
-    margin-inline: auto;
-    background: var(--dark-green);
-    border-radius: 0 0 var(--radius) var(--radius);
-  }
-
-  .about-hero h1 {
-    max-width: 620px;
-    font-size: clamp(2.55rem, 3.3vw, 3.1rem);
-  }
-
   .about-foundation > div:last-child {
     max-width: 620px;
   }
@@ -2639,80 +2588,63 @@ address {
     margin-bottom: 10px;
   }
 
-  .class-page-nav {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    padding-inline: 24px;
-  }
-
-  .class-page-nav a {
-    flex-direction: column;
-    justify-content: center;
-    min-height: 48px;
-    padding: 5px 4px;
-    gap: 1px;
-    font-size: 0.7rem;
-    text-align: center;
-  }
-
-  .class-page-nav a:first-child {
-    border-left: 1px solid rgb(0 0 0 / 12%);
-  }
-
-  .class-page-nav span {
-    font-size: 0.55rem;
-  }
-
   .image-hero {
-    min-height: 390px;
-    align-items: flex-end;
-    padding: 40px 24px;
-  }
-
-  .home-hero {
-    min-height: 430px;
+    display: block;
+    min-height: 0;
+    padding: 0;
+    background: var(--dark-green);
   }
 
   .image-hero::after {
-    background: linear-gradient(0deg, rgb(0 0 0 / 88%) 0%, rgb(0 0 0 / 22%) 68%, rgb(0 0 0 / 6%) 100%);
+    display: none;
   }
 
-  .image-hero .hero-copy {
-    padding: 0;
-  }
-
-  .hero-image {
+  .image-hero .hero-image {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: clamp(240px, 68vw, 340px);
     object-position: var(--mobile-position, 50% 50%);
   }
 
-  .about-hero {
-    grid-template-columns: 1fr;
-    min-height: 0;
-  }
-
-  .about-hero-photo,
-  .about-hero-photo img {
-    height: clamp(300px, 70vw, 480px);
-    min-height: 0;
-  }
-
-  .about-hero-photo img {
-    object-position: var(--mobile-position, 50% 34%);
-  }
-
-  .about-hero .hero-copy {
+  .image-hero .hero-copy {
+    position: relative;
     width: 100%;
-    padding: 38px 24px 42px;
+    padding: 24px 24px 38px;
+    margin-top: -1px;
+    background: var(--dark-green);
   }
 
-  .about-hero h1 {
-    font-size: clamp(2.5rem, 8vw, 3.2rem);
+  .image-hero .hero-copy::before {
+    position: absolute;
+    top: -24px;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    height: 38px;
+    content: '';
+    background: var(--dark-green);
+    border-radius: 52% 48% 0 0 / 100% 100% 0 0;
+  }
+
+  .image-hero .hero-copy > * {
+    position: relative;
+    z-index: 1;
   }
 
   .seasonal-promo {
+    grid-template-columns: 1fr;
+  }
+
+  .seasonal-promo-image img {
+    height: clamp(220px, 48vw, 320px);
+  }
+
+  .seasonal-promo-content {
     grid-template-columns: 1fr 1fr;
   }
 
-  .seasonal-promo > div:first-child {
+  .seasonal-promo-content > div:first-child {
     grid-column: 1 / -1;
   }
 
@@ -3036,15 +2968,6 @@ address {
     min-height: 240px;
   }
 
-  .image-hero {
-    min-height: 360px;
-    padding-block: 34px;
-  }
-
-  .home-hero {
-    min-height: 400px;
-  }
-
   .lead {
     margin-bottom: 22px;
     font-size: 1rem;
@@ -3052,11 +2975,19 @@ address {
   }
 
   .seasonal-promo {
-    grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .seasonal-promo > div:first-child {
+  .seasonal-promo-image img {
+    height: 210px;
+  }
+
+  .seasonal-promo-content {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .seasonal-promo-content > div:first-child {
     grid-column: auto;
   }
 
@@ -3066,9 +2997,9 @@ address {
 
   .seasonal-promo-action {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     align-items: end;
-    gap: 4px 16px;
+    gap: 10px;
   }
 
   .seasonal-promo-action .button {
@@ -3949,52 +3880,6 @@ address {
     display: none;
   }
 
-  .classes-hero {
-    align-items: flex-start;
-    aspect-ratio: 3 / 2;
-    min-height: 0;
-    padding: 0;
-    background: var(--black);
-  }
-
-  .classes-hero::after {
-    display: block;
-    background: linear-gradient(180deg, rgb(0 0 0 / 24%) 0%, rgb(0 0 0 / 68%) 42%, rgb(0 0 0 / 58%) 82%, rgb(0 0 0 / 10%) 100%);
-  }
-
-  .classes-hero .hero-image {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .classes-hero .hero-copy {
-    width: 100%;
-    padding: clamp(64px, 24vw, 112px) 24px 18px;
-  }
-
-  .classes-hero .eyebrow {
-    position: absolute;
-    top: clamp(30px, 10vw, 52px);
-    left: 24px;
-    margin: 0;
-    font-size: 0.58rem;
-  }
-
-  .classes-hero h1 {
-    max-width: 440px;
-    margin-bottom: 10px;
-    font-size: clamp(2rem, 9vw, 2.5rem);
-  }
-
-  .classes-hero .lead {
-    max-width: 500px;
-    margin-bottom: 0;
-    font-size: clamp(0.82rem, 2.8vw, 1rem);
-    line-height: 1.45;
-  }
 }
 
 @media (max-width: 500px) {
@@ -4078,20 +3963,12 @@ address {
     padding-inline: 20px;
   }
 
-  main .classes-hero {
+  main .image-hero {
     padding-inline: 0;
   }
 
   h1 {
     font-size: 2.65rem;
-  }
-
-  .about-hero h1 {
-    font-size: 2.3rem;
-  }
-
-  .about-hero .lead {
-    font-size: 0.92rem;
   }
 
   .owner-profile {
