@@ -106,7 +106,6 @@ export default function Layout({ children }) {
             {navigation.map(([label, to]) => (
               <NavLink key={to} to={to}>{label}</NavLink>
             ))}
-            <ExternalCta href={externalLinks.generalRegistration}>Register</ExternalCta>
           </nav>
         </div>
       </header>
@@ -126,7 +125,6 @@ export default function Layout({ children }) {
               />
             </Link>
             <p>Performing arts in Hoboken since 2005.</p>
-            <ExternalCta className="button footer-register" href={externalLinks.generalRegistration}>View Classes & Register</ExternalCta>
           </div>
           <FooterSection title="Visit">
             <address>{siteSettings.address}</address>

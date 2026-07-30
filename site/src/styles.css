@@ -385,12 +385,12 @@ img {
   width: 100%;
   height: clamp(250px, 24vw, 340px);
   border-radius: var(--radius);
-  object-position: 50% 38%;
+  object-position: 50% 50%;
 }
 
 .seasonal-promo-content {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(250px, 0.9fr) minmax(190px, 0.55fr);
+  grid-template-columns: minmax(0, 1fr) minmax(250px, 0.8fr);
   align-items: center;
   gap: clamp(24px, 3.5vw, 48px);
 }
@@ -644,8 +644,20 @@ img {
 }
 
 .home-theatre {
+  position: relative;
   color: var(--white);
   background: var(--dark-green);
+}
+
+.home-theatre::before {
+  position: absolute;
+  top: -34px;
+  left: 0;
+  width: 100%;
+  height: 36px;
+  background: var(--dark-green);
+  border-radius: 55% 45% 0 0 / 100% 100% 0 0;
+  content: '';
 }
 
 .home-theatre h2,
@@ -725,9 +737,15 @@ img {
   margin-bottom: 16px;
 }
 
+.production-pricing-link {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
 .production-card {
   display: grid;
-  grid-template-columns: 150px 32px minmax(0, 1fr) auto;
+  grid-template-columns: 150px 32px minmax(0, 1fr);
   align-items: center;
   padding: 22px;
   margin-top: 16px;
@@ -992,6 +1010,26 @@ img {
 .schedule-callout p {
   max-width: 620px;
   margin-inline: auto;
+}
+
+.schedule-callout > .button {
+  margin-top: 12px;
+}
+
+.schedule-callout .schedule-button {
+  color: var(--dark-green);
+  background: var(--white);
+  border-color: var(--white);
+}
+
+.schedule-callout .schedule-button:hover {
+  color: var(--dark-green);
+  background: var(--light-gray);
+  border-color: var(--light-gray);
+}
+
+.schedule-callout .button:focus-visible {
+  outline-color: var(--white);
 }
 
 .schedule-frame {
@@ -1345,7 +1383,7 @@ img {
 
 .seasonal-rate {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   gap: clamp(28px, 6vw, 86px);
 }
@@ -1558,6 +1596,10 @@ img {
   color: rgb(255 255 255 / 80%);
 }
 
+.dance-teams .eyebrow {
+  color: var(--white);
+}
+
 .dance-teams-heading .text-link {
   color: var(--primary-green);
   font-weight: 600;
@@ -1662,6 +1704,13 @@ img {
   margin-top: 3px;
   color: var(--white);
   font-size: 0.9rem;
+}
+
+.teams-next-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .tags span {
@@ -1853,7 +1902,7 @@ img {
 }
 
 .rental-copy {
-  padding-block: clamp(58px, 7vw, 90px);
+  padding-block: clamp(48px, 5vw, 64px);
 }
 
 .rental-copy > p {
@@ -1884,10 +1933,35 @@ img {
   font-weight: 600;
 }
 
+.rental-section {
+  color: var(--black);
+  background: rgb(149 225 89 / 14%);
+}
+
+.rental-section h2,
+.rental-section .eyebrow,
+.rental-price strong,
+.rental-extra {
+  color: var(--dark-green);
+}
+
+.rental-section .button {
+  color: var(--white);
+  background: var(--dark-green);
+  border-color: var(--dark-green);
+}
+
+.rental-section .button:hover {
+  color: var(--dark-green);
+  background: var(--white);
+  border-color: var(--dark-green);
+}
+
 .rental-section > picture,
 .rental-section > img {
   height: 100%;
-  min-height: 580px;
+  min-height: 500px;
+  max-height: 650px;
 }
 
 .rental-section > picture img {
@@ -2356,8 +2430,54 @@ address {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.35fr 1fr 1fr;
+  grid-template-columns: 1.1fr 0.8fr 1.4fr;
   gap: 54px;
+}
+
+@media (min-width: 769px) {
+  .musical-theatre-hero {
+    min-height: 560px;
+    background: var(--dark-green);
+  }
+
+  .musical-theatre-hero .hero-image {
+    left: auto;
+    width: 46%;
+    object-position: 60% 35%;
+  }
+
+  .musical-theatre-hero::after {
+    background: linear-gradient(90deg, var(--dark-green) 0%, var(--dark-green) 52%, rgb(37 105 20 / 82%) 58%, transparent 72%);
+  }
+
+  .musical-theatre-hero .hero-copy {
+    width: min(48vw, 650px);
+  }
+
+  .footer-section:last-child .footer-section-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    column-gap: 24px;
+  }
+}
+
+@media (min-width: 1121px) {
+  :root {
+    --header-height: 86px;
+  }
+
+  .site-header .brand-logo {
+    width: 205px;
+  }
+
+  .site-header .brand-logo img {
+    height: 74px;
+  }
+
+  .site-header nav {
+    font-size: 0.84rem;
+  }
 }
 
 .footer-logo {
@@ -2679,6 +2799,23 @@ address {
   .image-hero .hero-copy > * {
     position: relative;
     z-index: 1;
+  }
+
+  .dance-teams-hero .hero-copy,
+  .dance-teams-hero .hero-copy::before {
+    background: var(--white);
+  }
+
+  .dance-teams-hero .hero-copy {
+    color: var(--black);
+  }
+
+  .dance-teams-hero h1 {
+    color: var(--dark-green);
+  }
+
+  .dance-teams-hero .eyebrow {
+    color: var(--dark-gray);
   }
 
   .seasonal-promo {
@@ -3243,19 +3380,17 @@ address {
 
   .party-path-grid,
   .hosted-package-grid {
-    display: flex;
-    margin-inline: -20px;
-    padding: 0 20px 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-inline: 0;
+    padding: 0;
     gap: 12px;
-    overflow-x: auto;
-    scroll-padding-inline: 20px;
-    scroll-snap-type: x mandatory;
+    overflow: visible;
   }
 
   .party-path-card,
   .hosted-package {
-    flex: 0 0 min(84vw, 340px);
-    scroll-snap-align: start;
+    width: 100%;
   }
 
   .party-path-card h3 {
@@ -3279,17 +3414,21 @@ address {
     padding-block: 34px 26px;
   }
 
+  .rental-section {
+    border-top: 4px solid var(--dark-green);
+  }
+
   .rental-price {
     margin-top: 22px;
   }
 
   .rental-section > picture,
   .rental-section > img {
-    min-height: 220px;
-    max-height: 220px;
+    min-height: 280px;
+    max-height: 280px;
+    object-position: 50% 55%;
   }
 
-  .party-space .party-gallery,
   .home-community .gallery {
     display: flex;
     margin-inline: -20px;
@@ -3300,11 +3439,24 @@ address {
     scroll-snap-type: x mandatory;
   }
 
-  .party-space .party-gallery img,
   .home-community .gallery img {
     flex: 0 0 min(74vw, 290px);
     height: 190px;
     scroll-snap-align: start;
+  }
+
+  .party-space .party-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-inline: 0;
+    padding-inline: 0;
+    gap: 8px;
+    overflow: visible;
+  }
+
+  .party-space .party-gallery img {
+    width: 100%;
+    height: 150px;
   }
 
   .class-finder {

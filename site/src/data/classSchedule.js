@@ -89,7 +89,7 @@ const scheduleRows = [
   },
   {
     "day": "Tuesday",
-    "time": "3:45–4:30",
+    "time": "3:45–4:30pm",
     "age": "All Ages",
     "name": "Power & Flow",
     "studio": "Studio A",
@@ -121,7 +121,7 @@ const scheduleRows = [
   },
   {
     "day": "Tuesday",
-    "time": "5:15–6:00",
+    "time": "5:15–6:00pm",
     "age": "7–10 yrs",
     "name": "Hip Hop",
     "studio": "Studio A",
@@ -257,7 +257,7 @@ const scheduleRows = [
   },
   {
     "day": "Thursday",
-    "time": "5:00–5:45",
+    "time": "5:00–5:45pm",
     "age": "8-Teen",
     "name": "Leaps & Turns",
     "studio": "Studio A",

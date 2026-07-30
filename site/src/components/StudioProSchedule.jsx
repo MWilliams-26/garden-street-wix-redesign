@@ -10,10 +10,10 @@ export default function StudioProSchedule() {
       {externalLinks.liveSchedule ? (
         <div className="schedule-frame">
           <iframe title="Garden Street live class schedule" src={externalLinks.liveSchedule} loading="lazy" />
-          <ExternalCta href={externalLinks.generalRegistration}>Open registration in Studio Pro</ExternalCta>
+          <ExternalCta className="button schedule-button" href={externalLinks.generalRegistration}>Open registration in Studio Pro</ExternalCta>
         </div>
       ) : (
-        <ExternalCta href={externalLinks.generalRegistration}>View classes in Studio Pro</ExternalCta>
+        <ExternalCta className="button schedule-button" href={externalLinks.generalRegistration}>View classes in Studio Pro</ExternalCta>
       )}
     </section>
   );
