@@ -1,4 +1,4 @@
-name: Deploy client preview to GitHub Pages
+name: Test and deploy website
 
 on:
   push:
@@ -68,3 +68,18 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  promote-cloudflare:
+    name: Promote tested commit to Cloudflare
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      contents: write
+    steps:
+      - name: Check out tested commit
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Update Cloudflare production branch
+        run: git push origin HEAD:refs/heads/cloudflare-production
