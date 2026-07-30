@@ -1,0 +1,43 @@
+name: Check website quality
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Install dependencies
+        working-directory: site
+        run: npm ci
+
+      - name: Lint source
+        working-directory: site
+        run: npm run lint
+
+      - name: Build site
+        working-directory: site
+        run: npm run build
+
+      - name: Install browser
+        working-directory: site
+        run: npx playwright install --with-deps chromium
+
+      - name: Run browser regression tests
+        working-directory: site
+        run: npm run test:e2e

@@ -29,3 +29,6 @@ Thumbs.db
 *.temp
 ~$*
 .vscode/settings.local.json
+playwright-report/
+test-results/
+blob-report/

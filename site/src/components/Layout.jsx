@@ -1,4 +1,4 @@
-import { useEffect, useId, useRef, useState } from 'react';
+import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { navigation } from '../data/navigation';
 import { externalLinks } from '../data/externalLinks';
@@ -28,17 +28,13 @@ export default function Layout({ children }) {
   const previousPathname = useRef(null);
   const { pathname, hash } = useLocation();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setOpen(false);
     const pathChanged = previousPathname.current !== pathname;
     previousPathname.current = pathname;
-    const frame = window.requestAnimationFrame(() => {
-      const target = hash && document.getElementById(decodeURIComponent(hash.slice(1)));
-      if (target) target.scrollIntoView({ behavior: 'auto', block: 'start' });
-      else if (pathChanged) window.scrollTo({ top: 0, behavior: 'auto' });
-    });
-
-    return () => window.cancelAnimationFrame(frame);
+    const target = hash && document.getElementById(decodeURIComponent(hash.slice(1)));
+    if (target) target.scrollIntoView({ behavior: 'auto', block: 'start' });
+    else if (pathChanged) window.scrollTo({ top: 0, behavior: 'auto' });
   }, [pathname, hash]);
 
   useEffect(() => {
