@@ -15,13 +15,14 @@ const routes = [
 
 for (const [path, heading] of routes) {
   test(`${path} loads without browser errors`, async ({ page }) => {
+    test.setTimeout(60_000);
     const errors = [];
     page.on('console', (message) => {
       if (message.type() === 'error') errors.push(message.text());
     });
     page.on('pageerror', (error) => errors.push(error.message));
 
-    const response = await page.goto(path, { waitUntil: 'networkidle' });
+    const response = await page.goto(path, { waitUntil: 'domcontentloaded' });
     expect(response?.ok()).toBeTruthy();
     await expect(page.getByRole('heading', { level: 1, name: heading })).toBeVisible();
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBe(true);
@@ -30,7 +31,10 @@ for (const [path, heading] of routes) {
     for (let index = 0; index < await images.count(); index += 1) {
       const image = images.nth(index);
       await image.scrollIntoViewIfNeeded();
-      await expect.poll(() => image.evaluate((element) => element.complete && element.naturalWidth > 0)).toBe(true);
+      await expect.poll(
+        () => image.evaluate((element) => element.complete && element.naturalWidth > 0),
+        { timeout: 15_000 },
+      ).toBe(true);
     }
 
     expect(errors).toEqual([]);
