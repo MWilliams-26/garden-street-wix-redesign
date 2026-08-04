@@ -1,6 +1,6 @@
 # Cloudflare Pages deployment (approval required)
 
-**Current state:** Wix remains live. No deployment, DNS change, commit, or push has been done. The steps below are a runbook, not authorization.
+**Current state:** Wix remains live. Repository previews and code pushes have occurred, but no production deployment or DNS change is authorized by this runbook.
 
 ## Create the preview project
 

@@ -28,4 +28,4 @@ Record approver, date, and notes for every item. Approval of content is not appr
 - [ ] Keep Wix live and paid during cutover and the agreed stability period.
 - [ ] **Cancel Wix only after the new site is stable, post-launch issues are resolved, needed exports are retained, and the client gives explicit final approval.**
 
-Status reminder: Wix is live; no deployment, DNS change, commit, or push has been done.
+Status reminder: Wix is live. Repository previews and code pushes do not authorize production deployment or DNS changes.

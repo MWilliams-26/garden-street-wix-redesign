@@ -1,8 +1,8 @@
-# Garden Street Performing Arts Wix Redesign
+# Garden Street School of the Performing Arts Wix Redesign
 
 ## Purpose
 
-This repository is the shared project headquarters for the Garden Street Performing Arts website redesign. The user-authorized custom Vite + React app is in `site/`; planning and source records remain at the root. Wix stays live until an approved migration. Do not deploy, change DNS, or alter Wix without explicit approval.
+This repository is the shared project headquarters for the Garden Street School of the Performing Arts website redesign. The user-authorized custom Vite + React app is in `site/`; planning and source records remain at the root. Wix stays live until an approved migration. Do not deploy, change DNS, or alter Wix without explicit approval.
 
 ## What this repository is not
 

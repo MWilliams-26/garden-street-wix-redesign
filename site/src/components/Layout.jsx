@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 import { navigation } from '../data/navigation';
 import { externalLinks } from '../data/externalLinks';
 import { siteSettings } from '../data/siteSettings';
+import ClientThemeReviewBar from './ClientThemeReviewBar';
 import ExternalCta from './ExternalCta';
 
 const focusableSelector = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
@@ -140,10 +141,11 @@ export default function Layout({ children }) {
           </FooterSection>
         </div>
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} Garden Street Performing Arts</p>
+          <p>© {new Date().getFullYear()} Garden Street School of the Performing Arts</p>
           <p>Privacy policy coming soon.</p>
         </div>
       </footer>
+      <ClientThemeReviewBar />
     </>
   );
 }

@@ -1,6 +1,6 @@
 # Garden Street custom website
 
-This is the future Garden Street Performing Arts presentation site: Vite, React, and React Router. **Wix remains live. No deployment, DNS change, commit, or push has been performed.** Studio Pro remains the system of record for registration, class availability, accounts, and payments; this site explains programs and sends families there.
+This is the future Garden Street School of the Performing Arts presentation site: Vite, React, and React Router. **Wix remains live; repository previews and code pushes do not authorize deployment or DNS changes.** Studio Pro remains the system of record for registration, class availability, accounts, and payments; this site explains programs and sends families there.
 
 ## Local setup and checks
 

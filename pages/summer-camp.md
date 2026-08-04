@@ -11,8 +11,8 @@ Present verified Summer Camp information in a parent-friendly format without imp
 
 ## SEO and page settings
 
-- **Page title:** Summer Camp | Garden Street Performing Arts
-- **Meta description:** Learn about Summer Camp at Garden Street Performing Arts in Hoboken.
+- **Page title:** Summer Camp | Garden Street School of the Performing Arts
+- **Meta description:** Learn about Summer Camp at Garden Street School of the Performing Arts in Hoboken.
 - **URL slug:** `/summer-camp`
 - **Legacy redirect:** `/camps-performances` → `/summer-camp`
 

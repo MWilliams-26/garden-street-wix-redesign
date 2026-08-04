@@ -16,6 +16,21 @@ Use these exact approved values consistently; do not substitute near matches.
 
 Poppins is locally bundled with `@fontsource/poppins` in weights 400, 600, and 700. Keep a system sans-serif fallback. Use 400 for body copy, 600 for controls/subheads, and 700 sparingly for major headings.
 
+## Semantic color architecture
+
+The supplied palette is applied through semantic custom properties at the top of `src/styles.css`. Components use tokens such as `--color-page-background`, `--color-heading-text`, `--color-card-background`, `--color-primary-button-background`, and `--color-dark-feature-background` rather than theme names or one-off color conditions.
+
+Three client-review directions vary the proportion and placement of the supplied colors while preserving the same layouts and components. Warm & Artistic uses the single approved warm neutral `#F7F6F2`; Bold & Editorial uses restrained neutral charcoals. Neither introduces another brand accent. See `THEME-REVIEW.md` for exact token tables, section rhythms, review-mode controls, and final-selection instructions.
+
+When styling or changing a component:
+
+- Choose the semantic token that describes the color's responsibility.
+- Add or adjust values in all three theme declarations when a new responsibility is genuinely necessary.
+- Do not branch on `data-theme` inside React components.
+- Keep long-form content on page, alternate, or elevated surfaces.
+- Reserve bright green for actions, selections, and concise promotional moments—not body text.
+- Reserve dark feature surfaces for short, high-contrast sections and use photography to break up visual weight.
+
 ## Layout and responsive behavior
 
 - Use a clear content hierarchy, short readable lines, consistent spacing, and a centered content container. Avoid dense flyer-like layouts.

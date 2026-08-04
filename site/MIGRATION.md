@@ -1,6 +1,6 @@
 # Wix-to-Cloudflare migration plan
 
-Wix remains live until a separately approved cutover. No deployment, DNS change, commit, or push has been performed.
+Wix remains live until a separately approved cutover. Repository previews and code pushes have occurred; production deployment and DNS changes still require separate approval.
 
 ## Verified route inventory and proposed mappings
 

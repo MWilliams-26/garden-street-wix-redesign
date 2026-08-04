@@ -2,7 +2,7 @@
 
 ## Page objective
 
-Help parents quickly understand Garden Street Performing Arts, identify the right next step, and reach verified program or Studio Pro destinations.
+Help parents quickly understand Garden Street School of the Performing Arts, identify the right next step, and reach verified program or Studio Pro destinations.
 
 ## Audience questions
 

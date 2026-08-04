@@ -2,7 +2,7 @@
 
 ## Project summary
 
-- **Client:** Garden Street Performing Arts
+- **Client:** Garden Street School of the Performing Arts
 - **Current website:** <https://www.gardenstreetperformingarts.com/>
 - **Project:** Parent-friendly, responsive Wix redesign
 - **Operational platform:** Studio Pro

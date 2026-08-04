@@ -6,7 +6,7 @@ Build trust with an accurate, welcoming studio story, verified values, and appro
 
 ## Audience questions
 
-- Who is Garden Street Performing Arts?
+- Who is Garden Street School of the Performing Arts?
 - What does the studio value?
 - Who will work with my family?
 - What is the studio environment like?
